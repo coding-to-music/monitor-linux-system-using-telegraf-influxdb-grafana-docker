@@ -86,6 +86,8 @@ To create a Telegraf configuration file using Docker, run the following command.
 docker run --rm telegraf telegraf config | sudo tee /etc/telegraf/telegraf.conf < /dev/null
 ```
 
+![image](/images/create_a_Telegraf_configuration_file_using_Docker.png)
+
 create a Telegraf configuration file using Docker
 
 Next, reassign the correct permissions to your Telegraf configuration folder. This will ensure that only Telegraf itself and the root account are able to write to the configuration file.

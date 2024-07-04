@@ -1,0 +1,13 @@
+{
+  "name": "monitor-linux-system-using-telegraf-influxdb-grafana-docker",
+  "version": "1.0.0",
+  "description": "# 🚀 Monitor linux system health using Telegraf, InfluxDB and Grafana using Docker 🚀",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git add . && git commit -m Build && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

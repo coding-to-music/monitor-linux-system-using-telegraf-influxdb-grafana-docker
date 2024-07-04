@@ -102,6 +102,8 @@ With Telegraf, most of the time, you will want to send metrics directly to Influ
 
 Edit your Telegraf configuration file, and locate the [[outputs.influxdb]] section.
 
+![image](/images/Edit_Telegraf_configuration_file.png)
+
 Edit Telegraf configuration file
 
 In this configuration file, locate the “HTTP Basic Auth” section and modify the credentials accordingly.
@@ -146,6 +148,8 @@ Great! To make sure your Telegraf instance is running correctly, run the followi
 docker container logs -f --since 10m telegraf
 ```
 
+![image](/images/make_sure_Telegraf_instance_run_correctly.png)
+
 make sure Telegraf instance run correctly
 
 Telegraf seems not to raise any error messages, but let’s double-check the correctness of our setup by inspecting the InfluxDB database:
@@ -163,6 +167,8 @@ name: databases name ---- weather \_internal telegraf
 ```
 
 If you are seeing data points, congratulations! Your Telegraf instance is correctly sending metrics to your InfluxDB server:
+
+![image](/images/data_points.png)
 
 data points
 
@@ -194,13 +200,19 @@ With your web browser, head over to http://localhost:3000.
 
 You should be redirected to Grafana homepage. The default credentials for Grafana are admin/admin. Immediately, you are asked to change your password. Choose a strong password and click on “Save.”
 
-## Configuring Grafana for InfluxDB
+![image](/images/Configuring_Grafana_for_InfluxDB.png)
+
+Configuring Grafana for InfluxDB
 
 You should now be redirected to the Grafana default Web UI:
+
+![image](/images/Grafana_Web_UI.png)
 
 Grafana Web UI
 
 Click on “Add data source” to add an InfluxDB datasource:
+
+![image](/images/Add_an_InfluxDB_datasource.png)
 
 Add an InfluxDB datasource
 
@@ -222,6 +234,8 @@ Output
 
 Copy the IPv4 address and paste it in the InfluxDB configuration for Grafana. Select the Basic Auth option, specify your administrator credentials, and fill the details about your InfluxDB database. Here is the final configuration:
 
+![image](/images/final_configuration.png)
+
 final configuration
 
 Click on “Save and Test” to make sure that your configuration is working properly.
@@ -232,15 +246,23 @@ Awesome! Now that everything is set up in Grafana, let’s import a dashboard de
 
 To import a Grafana dashboard, select the “Plus” icon in the left menu, and click on “Import“:
 
+![image](/images/Importing_a_Grafana_Dashboard.png)
+
 Importing a Grafana Dashboard
 
 In the import text box, put 1443 as a dashboard ID:
+
+![image](/images/1443_as_a_dashboard_ID.png)
 
 1443 as a dashboard ID
 
 In the next window, make sure that the information is correct and bind it to your newly created datasource:
 
+![image](/images/Check_all_information.png)
+
 Check all information
+
+![image](/images/Telegraf_host_metrics.png)
 
 Telegraf host metrics
 

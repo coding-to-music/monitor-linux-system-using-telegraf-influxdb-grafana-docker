@@ -93,7 +93,7 @@ create a Telegraf configuration file using Docker
 Next, reassign the correct permissions to your Telegraf configuration folder. This will ensure that only Telegraf itself and the root account are able to write to the configuration file.
 
 ```bash
-sudo chown telegraf:telegraf /etc/telegraf/\*
+sudo chown telegraf:telegraf /etc/telegraf/*
 ```
 
 ## Modify your Telegraf configuration file
